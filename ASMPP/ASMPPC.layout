@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<FileVersion major="1" minor="0" />
+	<ActiveTarget name="Release" />
+	<File name="lib\include\io_utilities.hpp" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="746" topLine="15" />
+		</Cursor>
+	</File>
+	<File name="lib\cpp\asmpp_compiler.cpp" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="7452" topLine="234" />
+		</Cursor>
+	</File>
+	<File name="lib\include\asmpp_instruction_set.hpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2610" topLine="57" />
+		</Cursor>
+	</File>
+	<File name="lib\cpp\asmpp_instruction_set.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="756" topLine="18" />
+		</Cursor>
+	</File>
+	<File name="lib\include\asmpp_instruction_declaration.hpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="702" topLine="10" />
+		</Cursor>
+	</File>
+	<File name="lib\include\string_utilities.hpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="7004" topLine="194" />
+		</Cursor>
+	</File>
+	<File name="lib\main_c.hpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="204" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="lib\include\asmpp_compiler.hpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3056" topLine="180" />
+		</Cursor>
+	</File>
+	<File name="lib\include\array.hpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="12114" topLine="363" />
+		</Cursor>
+	</File>
+</CodeBlocks_layout_file>

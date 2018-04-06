@@ -1,0 +1,43 @@
+# depslib dependency file v1.0
+1522552815 source:d:\cpp\asmpp\main_c.cpp
+	<iostream>
+	"lib/include/asmpp_compiler.hpp"
+
+1522974330 source:d:\cpp\asmpp\lib\cpp\asmpp_compiler.cpp
+	"../include/asmpp_compiler.hpp"
+	"../include/asmpp_instruction_declaration.hpp"
+	"../main_c.hpp"
+
+1522945539 d:\cpp\asmpp\lib\include\asmpp_compiler.hpp
+	<iostream>
+	"array.hpp"
+	"string_utilities.hpp"
+	"io_utilities.hpp"
+	"asmpp_instruction_set.hpp"
+
+1522974039 d:\cpp\asmpp\lib\include\array.hpp
+	<malloc.h>
+	<iostream>
+	<fstream>
+
+1522972556 d:\cpp\asmpp\lib\include\string_utilities.hpp
+	"array.hpp"
+
+1522975661 d:\cpp\asmpp\lib\include\io_utilities.hpp
+	<fstream>
+	<malloc.h>
+	"array.hpp"
+	"string_utilities.hpp"
+
+1522976905 d:\cpp\asmpp\lib\include\asmpp_instruction_set.hpp
+	"array.hpp"
+	"string_utilities.hpp"
+
+1522980269 d:\cpp\asmpp\lib\include\asmpp_instruction_declaration.hpp
+
+1522937075 source:d:\cpp\asmpp\lib\cpp\asmpp_instruction_set.cpp
+	"../include/asmpp_instruction_set.hpp"
+
+1522974285 d:\cpp\asmpp\lib\main_c.hpp
+	<iostream>
+

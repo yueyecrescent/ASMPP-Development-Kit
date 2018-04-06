@@ -1,0 +1,117 @@
+# depslib dependency file v1.0
+1519105426 source:d:\cpp\vm\main.cpp
+	<iostream>
+	<string.h>
+	"lib/asm_compa.hpp"
+
+1518932890 d:\cpp\vm\lib\ioutilities.hpp
+	<fstream>
+	<malloc.h>
+	"array.hpp"
+
+1519100744 d:\cpp\vm\lib\array.hpp
+	<malloc.h>
+	<iostream>
+
+1519105140 d:\cpp\vm\lib\asm_compa.hpp
+	<iostream>
+	"ioutilities.hpp"
+	"array.hpp"
+	"InstructionSet.hpp"
+	"stringutilities.hpp"
+
+1519105725 d:\cpp\vm\lib\instructionset.hpp
+	"ins_bytecode.hpp"
+	"stringutilities.hpp"
+
+1518964369 d:\cpp\vm\lib\ins_bytecode.hpp
+	"metautilities.hpp"
+
+1518604539 d:\cpp\vm\lib\metautilities.hpp
+
+1519104532 d:\cpp\vm\lib\stringutilities.hpp
+	"array.hpp"
+
+1520734942 source:d:\cpp\asmpp\lib\asmpp_compiler.cpp
+	"asmpp_compiler.hpp"
+
+1520738070 d:\cpp\asmpp\lib\asmpp_compiler.hpp
+	<iostream>
+	"array.hpp"
+	"io_utilities.hpp"
+	"asmpp_instruction_set.hpp"
+	"string_utilities.hpp"
+
+1520733792 d:\cpp\asmpp\lib\io_utilities.hpp
+	<fstream>
+	<malloc.h>
+	"array.hpp"
+
+1520738143 d:\cpp\asmpp\lib\array.hpp
+	<malloc.h>
+	<iostream>
+	<fstream>
+
+1520735459 d:\cpp\asmpp\lib\asmpp_instruction_set.hpp
+	"asmpp_instruction_bytecode.hpp"
+	"string_utilities.hpp"
+	"asmpp_instruction_declaration.hpp"
+
+1520733724 d:\cpp\asmpp\lib\asmpp_instruction_bytecode.hpp
+	"meta_utilities.hpp"
+
+1520733725 d:\cpp\asmpp\lib\meta_utilities.hpp
+
+1520731395 d:\cpp\asmpp\lib\string_utilities.hpp
+	"array.hpp"
+	<string.h>
+
+1520728256 d:\cpp\asmpp\lib\asmpp_instruction_declaration.hpp
+
+1520738597 source:d:\cpp\asmpp\main.cpp
+	<iostream>
+
+1520734869 d:\cpp\asmpp\lib\asmpp_virtual_machine.hpp
+	<malloc.h>
+	"io_utilities.hpp"
+	"asmpp_instruction_set.hpp"
+
+1520734869 source:d:\cpp\asmpp\lib\asmpp_virtual_machine.cpp
+	"asmpp_virtual_machine.hpp"
+
+1522937075 source:d:\cpp\asmpp\lib\cpp\asmpp_instruction_set.cpp
+	"../include/asmpp_instruction_set.hpp"
+
+1522976905 d:\cpp\asmpp\lib\include\asmpp_instruction_set.hpp
+	"array.hpp"
+	"string_utilities.hpp"
+
+1522974039 d:\cpp\asmpp\lib\include\array.hpp
+	<malloc.h>
+	<iostream>
+	<fstream>
+
+1522972556 d:\cpp\asmpp\lib\include\string_utilities.hpp
+	"array.hpp"
+
+1522977147 source:d:\cpp\asmpp\lib\cpp\asmpp_virtual_machine.cpp
+	"../include/asmpp_virtual_machine.hpp"
+	"../include/asmpp_instruction_declaration.hpp"
+	"../main_vm.hpp"
+
+1522980239 d:\cpp\asmpp\lib\include\asmpp_virtual_machine.hpp
+	<malloc.h>
+	<fstream>
+	"io_utilities.hpp"
+	"asmpp_instruction_set.hpp"
+
+1522975661 d:\cpp\asmpp\lib\include\io_utilities.hpp
+	<fstream>
+	<malloc.h>
+	"array.hpp"
+	"string_utilities.hpp"
+
+1522980269 d:\cpp\asmpp\lib\include\asmpp_instruction_declaration.hpp
+
+1522980861 d:\cpp\asmpp\lib\main_vm.hpp
+

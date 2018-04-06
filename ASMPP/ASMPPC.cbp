@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="ASMPPC" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/ASMPPC" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-std=c++14" />
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/ASMPPC" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-std=c++14" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="lib/cpp/asmpp_compiler.cpp" />
+		<Unit filename="lib/cpp/asmpp_instruction_set.cpp" />
+		<Unit filename="lib/include/array.hpp" />
+		<Unit filename="lib/include/asmpp_compiler.hpp" />
+		<Unit filename="lib/include/asmpp_instruction_declaration.hpp" />
+		<Unit filename="lib/include/asmpp_instruction_set.hpp" />
+		<Unit filename="lib/include/io_utilities.hpp" />
+		<Unit filename="lib/include/meta_utilities.hpp" />
+		<Unit filename="lib/include/string_utilities.hpp" />
+		<Unit filename="lib/main_c.hpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
