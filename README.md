@@ -8,7 +8,7 @@
 <br>There is a file named "ASMPP/lib/include/asmpp_instruction_declaration.hpp",you can define your code there.
   <br>Example:
   <br>INS_BEGIN(ASMPP,LDRIV,0x00000000,RN)
-      <br>REG_VAL(0)=NUM_VAL(1);
+      <br>  REG_VAL(0)=NUM_VAL(1);
   <br>INS_END(LDRIV)
   <br>"ASMPP" is the name of instruction set.
   <br>"LDRIV" is the name of instruction.
