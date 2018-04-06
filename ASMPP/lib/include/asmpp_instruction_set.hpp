@@ -4,6 +4,7 @@
 #define REG_VAL(OFFSET) (*(register_field_address+*(data_field_address+data_address_offset+OFFSET)))
 #define MEM_VAL(OFFSET) (*(memory_field_address+*(data_field_address+data_address_offset+OFFSET)))
 #define NUM_VAL(OFFSET) (*(data_field_address+data_address_offset+OFFSET))
+#define LAB_VAL(OFFSET) (*(data_field_address+data_address_offset+OFFSET))
 
 #define IS_DEF(ISNAME,NUM) asmpp::is::InstructionSet Is_##ISNAME(NUM);
 

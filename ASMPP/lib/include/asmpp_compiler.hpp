@@ -21,7 +21,7 @@
                     }
 //For syntaxer
 #define flush_singleins {\
-                        sigins_buffer.append(SingleInstruction(this_keyword,arg_buffer.toArray(),this));\
+                        sigins_buffer.append(SingleInstruction(this_keyword,arg_buffer.toArray(),this,table.Lables));\
                         arg_buffer.clear();\
                     }
 
@@ -210,13 +210,13 @@ namespace asmpp
             SingleInstruction()
             {
             }
-            SingleInstruction(String<> ins,Array<String<>> args,ASMPPCompiler *compiler_)
+            SingleInstruction(String<> ins,Array<String<>> args,ASMPPCompiler *compiler_,Array<Lable> lables)
             {
                 this->compiler=compiler_;
                 arguments=Array<int>(args.length);
                 keyword_bytecode=getByteCodeAndCheckArgNumber(ins,args.length);
                 for(int i=0; i<args.length; ++i)
-                    arguments.setElement(i,getArgumentValueAndCheckArgType(keyword_bytecode,i,args[i]));
+                    arguments.setElement(i,getArgumentValueAndCheckArgType(keyword_bytecode,i,args[i],lables));
             }
         private:
             ASMPPCompiler *compiler;
@@ -243,7 +243,7 @@ namespace asmpp
                 return 0;
             }
 
-            inline int getArgumentValueAndCheckArgType(int ins_code,int arg_pos,String<> arg)
+            inline int getArgumentValueAndCheckArgType(int ins_code,int arg_pos,String<> arg,Array<Lable> lables)
             {
                 switch(String<>::charToUpperCase(arg[0]))
                 {
@@ -265,6 +265,10 @@ namespace asmpp
                 {
                     if(*(compiler->ins_set.getInstructionByByteCode(ins_code)->para_types+arg_pos)=='N')
                         return arg.parseToInt();
+                }else{
+                    if(*(compiler->ins_set.getInstructionByByteCode(ins_code)->para_types+arg_pos)=='L')
+                        for(int i=0;i<lables.length;++i)
+                            if(lables.getElement(i).name.equals(arg))return lables.getElement(i).line;
                 }
                 //abort_error()
                 return 0;
