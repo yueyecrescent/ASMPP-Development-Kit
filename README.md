@@ -14,7 +14,7 @@
   <br>"LDRIV" is the name of instruction.
   <br>"0x00000000" is the bytecode of the instruction.
   <br>"RN" is the parameters' types of the instruction.
-  <br>"R" is short for register,"M" is short for memory,"N" is short for number(immediate value).
+  <br>"R" is short for register,"M" is short for memory,"N" is short for number(immediate value),"L" is short for lable.
   <br>In the macro "INS_END",just input the name of the instruction again.
 <br>When you define a new instruction,don't forget to extend the instruction set.
   <br>Example:
