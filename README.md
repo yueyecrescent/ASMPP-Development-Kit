@@ -1,6 +1,6 @@
 # ASMPP-Development-Kit
 ## \<Project Info\>
-<br>A assembly language's compiler and virtual machine.You can remade it and put it into your own project.
+<br>An assembly language's compiler and virtual machine.You can remade it and put it into your own project.
 <br>All the source code are in folder "ASMPP/lib/".The C++ standard is C++14.
 <br>If you use Code::Blocks IDE,then you can import the project directly.
 <br>This is an open source project.And **you can use it for commercial use**.
