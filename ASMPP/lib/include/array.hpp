@@ -104,7 +104,7 @@ namespace utilities
             {
                 Array<E> *res=new Array<E>(this->length+arr.length);
                 for(int pos=0; pos<this->length; ++pos)
-                    res->getElement(pos)=*this[pos];
+                    res->getElement(pos)=this[pos];
                 for(int pos=0; pos<arr.length; ++pos)
                     res->getElement(this->length+pos)=arr[pos];
                 return *res;
@@ -113,7 +113,7 @@ namespace utilities
             {
                 Array<E> *res=new Array<E>(this->length+arr.length);
                 for(int pos=0; pos<this->length; ++pos)
-                    res->getElement(pos)=*this[pos];
+                    res->getElement(pos)=this[pos];
                 for(int pos=0; pos<arr.length; ++pos)
                     res->getElement(this->length+pos)=arr[pos];
                 arr.setDeleteFlag(true);
@@ -338,6 +338,15 @@ namespace utilities
                 E *arr=new E[length];
                 for(register int pos=0; pos<length; ++pos)
                     arr[pos]=*(head+pos);
+                return Array<E>(arr,length);
+            }
+            inline Array<E> toReservedArray()
+            {
+                int length=getLength();
+                int rpos=length-1;
+                E *arr=new E[length];
+                for(register int pos=0; rpos>-1; --rpos,++pos)
+                    arr[pos]=*(head+rpos);
                 return Array<E>(arr,length);
             }
             void clear()

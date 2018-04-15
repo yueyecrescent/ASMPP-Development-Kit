@@ -60,16 +60,17 @@ namespace utilities{
             return bytes;
         }
 
-        Array<char> readBytesAsArray(const char* filename){
+        template<typename T>
+        Array<T> readBinaryAsArray(const char* filename){
             ifstream file(filename,ios::in|ios::binary);
             char *bytes=nullptr;
-            Array<char> bytesarray;
+            Array<T> bytesarray;
             if(file.is_open()){
                 GET_FILE_LENGTH(file,length)
                 bytes=new char[length];
                 file.read(bytes,length);
                 file.close();
-                Array<char>(bytes,length);
+                bytesarray=Array<T>((T*)bytes,length/sizeof(T));
             }
             return bytesarray;
         }

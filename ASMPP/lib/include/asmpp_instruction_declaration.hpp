@@ -27,7 +27,7 @@ IS_DEF(ASMPP,64)
         INS_END(MOV)
 /*控制流操作*/
         INS_BEGIN(ASMPP,JMP,6,N)
-            ins_pos=NUM_VAL(0);
+            INS_POS=NUM_VAL(0);
         INS_END(JMP)
 
 /*算数操作*/
@@ -82,36 +82,36 @@ IS_DEF(ASMPP,64)
 
         INS_BEGIN(ASMPP,IFREQLJMP,19,NRR)
             if(REG_VAL(1)==REG_VAL(2))
-                ins_pos=NUM_VAL(0);
+                INS_POS=NUM_VAL(0);
         INS_END(IFREQLJMP)
 
         INS_BEGIN(ASMPP,IFMEQLJMP,20,NMM)
             if(MEM_VAL(1)==MEM_VAL(2))
-                ins_pos=NUM_VAL(0);
+                INS_POS=NUM_VAL(0);
         INS_END(IFMEQLJMP)
 
         INS_BEGIN(ASMPP,IFRLESJMP,21,NRR)
             if(REG_VAL(1)<REG_VAL(2))
-                ins_pos=NUM_VAL(0);
+                INS_POS=NUM_VAL(0);
         INS_END(IFRLESJMP)
 
         INS_BEGIN(ASMPP,IFMLESJMP,22,NMM)
             if(MEM_VAL(1)<MEM_VAL(2))
-                ins_pos=NUM_VAL(0);
+                INS_POS=NUM_VAL(0);
         INS_END(IFMLESJMP)
 
         INS_BEGIN(ASMPP,IFRMORJMP,23,NRR)
             if(REG_VAL(1)>REG_VAL(2))
-                ins_pos=NUM_VAL(0);
+                INS_POS=NUM_VAL(0);
         INS_END(IFRMORJMP)
 
         INS_BEGIN(ASMPP,IFMMORJMP,24,NMM)
             if(MEM_VAL(1)>MEM_VAL(2))
-                ins_pos=NUM_VAL(0);
+                INS_POS=NUM_VAL(0);
         INS_END(IFMMORJMP)
 
         INS_BEGIN(ASMPP,GOTO,25,L)
-            ins_pos=LAB_VAL(0);
+            INS_POS=LAB_VAL(0);
         INS_END(GOTO)
 
         INS_BEGIN(ASMPP,SVLB2R,26,RL)
@@ -124,32 +124,32 @@ IS_DEF(ASMPP,64)
 
         INS_BEGIN(ASMPP,IFREQLGOTO,28,LRR)
             if(REG_VAL(1)==REG_VAL(2))
-                ins_pos=LAB_VAL(0);
+                INS_POS=LAB_VAL(0);
         INS_END(IFREQLGOTO)
 
         INS_BEGIN(ASMPP,IFMEQLGOTO,29,LMM)
             if(MEM_VAL(1)==MEM_VAL(2))
-                ins_pos=LAB_VAL(0);
+                INS_POS=LAB_VAL(0);
         INS_END(IFMEQLGOTO)
 
         INS_BEGIN(ASMPP,IFRLESGOTO,30,LRR)
             if(REG_VAL(1)<REG_VAL(2))
-                ins_pos=LAB_VAL(0);
+                INS_POS=LAB_VAL(0);
         INS_END(IFRLESGOTO)
 
         INS_BEGIN(ASMPP,IFMLESGOTO,31,LMM)
             if(MEM_VAL(1)<MEM_VAL(2))
-                ins_pos=LAB_VAL(0);
+                INS_POS=LAB_VAL(0);
         INS_END(IFMLESGOTO)
 
         INS_BEGIN(ASMPP,IFRMORGOTO,32,LRR)
             if(REG_VAL(1)>REG_VAL(2))
-                ins_pos=LAB_VAL(0);
+                INS_POS=LAB_VAL(0);
         INS_END(IFRMORGOTO)
 
         INS_BEGIN(ASMPP,IFMMORGOTO,33,LMM)
             if(MEM_VAL(1)>MEM_VAL(2))
-                ins_pos=LAB_VAL(0);
+                INS_POS=LAB_VAL(0);
         INS_END(IFMMORGOTO)
 
 #endif //ASMPP_INSTRUCTION_DECLARATION

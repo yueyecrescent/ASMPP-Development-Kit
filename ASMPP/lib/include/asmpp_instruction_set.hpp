@@ -8,7 +8,7 @@
 
 #define IS_DEF(ISNAME,NUM) asmpp::is::InstructionSet Is_##ISNAME(NUM);
 
-#define INS_BEGIN(IS,INSNAME,BYTECODE,TYPES) void Ins_exec_##INSNAME(int* register_field_address,int* memory_field_address,int* text_field_address,int* data_field_address,int& ins_pos,int& data_address_offset);\
+#define INS_BEGIN(IS,INSNAME,BYTECODE,TYPES) void Ins_exec_##INSNAME(int* register_field_address,int* memory_field_address,int* text_field_address,int* data_field_address,int& INS_POS,int& data_address_offset);\
         class Ins_def_##INSNAME:public asmpp::is::MachineInstruction{\
         public:\
             Ins_def_##INSNAME(){\
@@ -20,7 +20,7 @@
                 Is_##IS.instruction_set.setElement(byte_code,this);\
             }\
         };\
-        void Ins_exec_##INSNAME(int* register_field_address,int* memory_field_address,int* text_field_address,int* data_field_address,int& ins_pos,int& data_address_offset){
+        void Ins_exec_##INSNAME(int* register_field_address,int* memory_field_address,int* text_field_address,int* data_field_address,int& INS_POS,int& data_address_offset){
 
 #define INS_END(INSNAME) }\
         Ins_def_##INSNAME Ins_##INSNAME;

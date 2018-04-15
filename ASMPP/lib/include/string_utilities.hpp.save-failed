@@ -154,32 +154,15 @@ namespace utilities
             {
                 return equals(str);
             }
-            String<> operator + (String<> &str)
-            {
-                Array<char> res(this->length+str.length);
-                for(int pos=0; pos<this->length; ++pos)
-                    *(res.arr_ptr+pos)=*(this->arr_ptr+pos);
-                for(int pos=0; pos<str.length; ++pos)
-                    *(res.arr_ptr+this->length+pos)=*(str.arr_ptr+pos);
-                return String(res.arr_ptr,res.length);
-            }
-            String<> operator + (String<> &&str)
-            {
-                Array<char> res(this->length+str.length);
-                for(int pos=0; pos<this->length; ++pos)
-                    *(res.arr_ptr+pos)=*(this->arr_ptr+pos);
-                for(int pos=0; pos<str.length; ++pos)
-                    *(res.arr_ptr+this->length+pos)=*(str.arr_ptr+pos);
-                return String(res.arr_ptr,res.length);
-            }
+
             int isNumber(void)
             {
                 return isNumber(0,this->length-1);
             }
 
-            static String<> intParseToString_Hex_0x(int num)
+            static inline String<> intParseToString_Hex_0x(int num)
             {
-                char *str=new char[11]{'0','x','0','0','0','0','0','0','0','0','\0'};
+                char *str={'0','x','0','0','0','0','0','0','0','0','\0'};
                 for(register int i=9;i>1;--i){
                     str[i]=intParseToChar_Hex(num%16);
                     num/=16;
@@ -187,31 +170,31 @@ namespace utilities
                 return String<>(str,10);
             }
 
-            static String<> intParseToString(int num)
+            static inline String<> intParseToString(int num)
             {
-                DataBuffer<char> db(32);
-                db<<'\0';
-                for(;num>9;num/=10)
+                DataBuffer<char> db;
+                for(;num<10;num/=10)
                     db<<intParseToChar_Hex(num%10);
                 db<<intParseToChar_Hex(num);
                 Array<char> str=db.toReservedArray();
-                return String(str);
+                return String(str.arr_ptr,str.length);
             }
-            static inline int ifIsCharParseToInt(char ch)
+
+            static int ifIsCharParseToInt(char &ch)
             {
                 if(charIsNumber(ch))
                     return ch-48;
                 return -1;
             }
-            static inline int charParseToInt(char ch)
+            static inline int charParseToInt(char &ch)
             {
                 return ch-48;
             }
-            static inline bool charIsNumber(char ch)
+            static inline bool charIsNumber(char &ch)
             {
                 return (ch>47&&ch<58);
             }
-            static inline bool charIsNumber_Hex(char ch)
+            static inline bool charIsNumber_Hex(char &ch)
             {
                 return (ch>47&&ch<58)||(ch>64&&ch<71)||(ch>96&&ch<103);
             }
@@ -223,7 +206,7 @@ namespace utilities
                 else if(ch>96&&ch<103)v=ch-87;
                 return v;
             }
-            static inline int intParseToChar_Hex(int i)
+            static inline int intParseToChar_Hex(int &i)
             {
                 char v='\0';
                 if(i>-1&&i<10)v=(char)i+48;
@@ -237,7 +220,7 @@ namespace utilities
                 while(--p)res*=n;
                 return res;
             }
-            static inline char charToUpperCase(char ch)
+            static inline char charToUpperCase(char &ch)
             {
                 return ch>96&&ch<123?ch-32:ch;
             }
@@ -272,21 +255,7 @@ namespace utilities
                 return *this;
             }
 
-            StringBuffer & operator <<(char &&ch)
-            {
-                *(head+(++position))=ch;
-                return *this;
-            }
-
-            StringBuffer & operator <<(String<> &str){
-                for(int pos=0;pos<str.length;++pos)
-                {
-                    *(head+(++position))=str.getElement(pos);
-                }
-                return *this;
-            }
-
-            StringBuffer & operator <<(String<> &&str){
+            StringBuffer & operator <<(String<> str){
                 for(int pos=0;pos<str.length;++pos)
                 {
                     *(head+(++position))=str.getElement(pos);
